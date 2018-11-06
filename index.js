@@ -26,22 +26,3 @@ class Passenger {
 }
 let tripId = 0;
 
-class Trip {
-    constructor(driver, passenger) {
-        this.id = ++tripId;
-        this.driverId = driver.id;
-        this.passengerId = passenger.id;
-
-        // insert in the user to the store
-        store.trips.push(this);
-
-    driver() {
-       return store.drivers.find(driver => {
-         return driver.id === this.driverId;
-       });
-     }
-
-
-    }
-
-}
