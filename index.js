@@ -42,7 +42,14 @@ class Passenger {
       return store.trips.filter(trip=>{
         return trip.passengerId === this.id}
       );
-    } 
+    }
+
+    drivers(){
+      return this.trips().map(trip=>{
+        return trip.driver();
+      }
+      )
+    }
 }
 let tripId = 0;
 class Trip {
