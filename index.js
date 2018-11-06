@@ -10,8 +10,14 @@ class Driver {
 
         // insert in the user to the store
         store.drivers.push(this);
+
+        trips(){
+          return store.trips.find( trip =>{
+            return trip.driverId === this.id}
+          )};
+        }
     }
-}
+
 
 let passengerId = 0;
 
