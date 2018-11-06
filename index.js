@@ -10,14 +10,14 @@ class Driver {
 
         // insert in the user to the store
         store.drivers.push(this);
-}
+      }
         trips(){
           return store.trips.filter( trip =>{
             return trip.driverId === this.id
           });
         }
         passengers() {
-            return this.trips.map(trip => {
+            return this.trips().map(trip => {
               return trip.passenger();}
             });
 
