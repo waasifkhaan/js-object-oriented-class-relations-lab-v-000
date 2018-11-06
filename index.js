@@ -37,6 +37,12 @@ class Passenger {
         // insert in the user to the store
         store.passengers.push(this);
     }
+
+    trips(){
+      return store.trips.filter(trip=>{
+        return trip.passengerId === this.id}
+      );
+    } 
 }
 let tripId = 0;
 class Trip {
